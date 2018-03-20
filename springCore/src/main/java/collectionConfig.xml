@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="hospital" class="com.abhi.spring.springCore.collectonIntegration.listCollection.Hospital">
+		<property name="name" value="ABC"></property>
+		<property name="departments">
+			<list>
+				<value>Reception</value>
+				<value>OPT</value>
+				<value>Nurses</value>
+				<value>
+					Doctors
+				</value>
+			</list>
+		</property>
+		<property name="doctors">
+			<list>
+					<list>
+						<value>Sr.Doctors</value>
+						<value>Jr.Doctors</value>
+					</list>
+					
+					<list>
+						<value>Trainee Doctors</value>
+						<value>Student Doctors</value>
+					</list>		
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="car" class="com.abhi.spring.springCore.collectonIntegration.setCollection.CarDealer">
+		<property name="name" value="Maruti"></property>
+		<property name="models">
+				<set>
+					<value>Wagnor</value>
+					<value>800</value>
+					<value>Swift</value>
+				</set>
+		</property>
+	</bean>
+	
+	<bean name="customer" class="com.abhi.springCore.collectionIntegration.mapCollection.Customer" p:id="100">
+		<property name="products">
+			<map>
+				<entry key="10" value="Cars"/>
+				<entry key="20" value="Bikes"/>
+				<entry key="30" value="Cycles"/>
+			</map>
+		</property>
+		
+	</bean>
+</beans>

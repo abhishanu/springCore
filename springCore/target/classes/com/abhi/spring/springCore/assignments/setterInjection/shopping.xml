@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="shoppingCart" class="com.abhi.spring.springCore.assignment.setterInjection.ShoppingCart">
+		<property name="item" ref="item"></property>
+	</bean>
+	
+	<bean name="item" class="com.abhi.spring.springCore.assignment.setterInjection.Item" 
+		p:id="100" p:name="dummy" p:price="100.02" p:quantity="2">	
+	</bean>
+	
+</beans>

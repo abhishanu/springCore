@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <bean class="com.abhi.spring.springCore.lifeCycle.annotations.Patient" name="patient" p:id="100" />
+    
+    <!-- To enable few annotation support in our class -->
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+	<!-- 
+		Or we can use 
+		<context:annotation-config/> in case to enable all annotation support
+	 -->
+	 
+</beans>

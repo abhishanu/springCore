@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+  	<bean class="com.abhi.spring.springCore.constructorInjection.Address" p:houseNo="110" p:city="Kanpur" p:state="UP" name="address"/>
+  	
+  	<bean class="com.abhi.spring.springCore.constructorInjection.Employee" name="emp" c:id="100">
+  		<!--  <constructor-arg value="100"/>-->
+  		<constructor-arg ref="address"/>
+  	
+  	</bean>
+  	
+  	<bean class="com.abhi.spring.springCore.constructorInjection.ambiguity.OverloadingProblemMain" name="test">
+  		<constructor-arg value="10" index="1"></constructor-arg>
+  		<constructor-arg value="20"></constructor-arg>
+  	</bean>
+
+</beans>
